@@ -26,9 +26,6 @@ class LoginView extends StatelessWidget {
           },
           color: Colors.green,
           elevation: 5.0,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(30.0)
-          ),
           padding: EdgeInsets.all(20.0),
           child: Text(
             'Login',
