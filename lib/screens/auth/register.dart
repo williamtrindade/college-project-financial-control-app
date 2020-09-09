@@ -1,11 +1,10 @@
-import 'package:app/screens/auth/register.dart';
+import 'package:app/screens/auth/login.dart';
+import 'package:app/screens/dash/dashboard.dart';
 import 'package:app/widgets/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../dash/dashboard.dart';
-
-class LoginScreen extends StatelessWidget {
+class RegisterScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -35,28 +34,29 @@ class LoginScreen extends StatelessWidget {
           // Add TextFormFields and RaisedButton here.
           Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Assets.secondaryTitle(text: 'Faça seu login'),
+            child: Assets.secondaryTitle(text: 'Cadastre-se'),
           ),
+          Assets.largeInput(label: 'Nome'),
           Assets.largeInput(label: 'Email'),
           Assets.largeInput(label: 'Senha'),
           Container(
             padding: EdgeInsets.all(8),
             width: double.infinity,
             child: Assets.primaryButton(
-                text: 'Entrar',
+                text: 'Cadastrar',
                 onPressed: () => {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => DashboardScreen())),
+                          builder: (context) => DashboardScreen()))
                     }),
           ),
           InkWell(
             onTap: () {
               Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => RegisterScreen()));
+                  MaterialPageRoute(builder: (context) => LoginScreen()));
             },
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Assets.secondaryTitle(text: 'Ainda não tenho conta.'),
+              child: Assets.secondaryTitle(text: 'Já tenho conta.'),
             ),
           ),
         ]);
