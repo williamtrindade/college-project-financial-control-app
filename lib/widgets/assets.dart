@@ -68,4 +68,12 @@ class Assets extends StatelessWidget {
       ),
     );
   }
+
+  static FloatingActionButton roundedFloatButton({@required IconData icon, @required Function onPressed}) {
+    return FloatingActionButton(
+      backgroundColor: Color(0xff27FF30),
+      child: Icon(icon, color: Colors.black),
+      onPressed: onPressed,
+    );
+  }
 }

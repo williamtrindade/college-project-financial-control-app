@@ -1,6 +1,7 @@
 import 'package:app/screens/auth/login.dart';
+import 'package:app/screens/posting/posting_list.dart';
 import 'package:app/widgets/assets.dart';
-import 'package:app/widgets/box_card.dart';
+import 'package:app/screens/dash/box_card.dart';
 import 'package:flutter/material.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -42,7 +43,7 @@ class DashboardScreen extends StatelessWidget {
               child: Assets.secondaryTitle(text: 'Gastos este mês'),
             ),
             Container(
-              height: 130,
+              height: 150,
               child:
                 Center(
                   child: ListView (
@@ -50,8 +51,13 @@ class DashboardScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: [
                       BoxCard(text: 'Histórico mensal', onTap: () => {}),
-                      BoxCard(text: 'Lançamentos', onTap: () => {}),
-                      BoxCard(text: 'Categorias de gastos', onTap: () => {}),
+                      BoxCard(text: 'Lançamentos', onTap: () => {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => PostingListScreen()
+                          )
+                        )
+                      }),
                       BoxCard(text: 'Categorias de gastos', onTap: () => {}),
                     ],
                   ),
