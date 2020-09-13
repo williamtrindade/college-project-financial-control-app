@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Assets extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(child: Text('Assets'));
@@ -69,7 +68,8 @@ class Assets extends StatelessWidget {
     );
   }
 
-  static FloatingActionButton roundedFloatButton({@required IconData icon, @required Function onPressed}) {
+  static FloatingActionButton roundedFloatButton(
+      {@required IconData icon, @required Function onPressed}) {
     return FloatingActionButton(
       backgroundColor: Color(0xff27FF30),
       child: Icon(icon, color: Colors.black),
