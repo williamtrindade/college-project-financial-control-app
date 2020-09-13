@@ -1,4 +1,5 @@
 import 'package:app/screens/posting/list_item.dart';
+import 'package:app/screens/posting/posting_create.dart';
 import 'package:app/widgets/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,11 @@ class PostingListScreen extends StatelessWidget {
             ),
           ],
         ),
-        floatingActionButton:
-            Assets.roundedFloatButton(icon: Icons.add, onPressed: () => {}));
+        floatingActionButton: Assets.roundedFloatButton(
+            icon: Icons.add,
+            onPressed: () => {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => PostingCreateScreen()))
+                }));
   }
 }
