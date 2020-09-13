@@ -1,4 +1,3 @@
-import 'package:app/widgets/assets.dart';
 import 'package:flutter/material.dart';
 
 class BoxCard extends StatelessWidget {

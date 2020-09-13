@@ -1,3 +1,4 @@
+import 'package:app/screens/posting/list_item.dart';
 import 'package:app/widgets/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -18,36 +19,22 @@ class PostingListScreen extends StatelessWidget {
             Expanded(
               child: Container(
                 child: ListView.builder(
-                  itemCount: 50,
-                  itemBuilder: (context, index) {
-                    return Material(
-                      elevation: 20,
-                      child: Container(
-                        margin: EdgeInsets.all(10),
-                        child: Column(
-                          children: [
-                            ListTile(
-                              onTap: () => {
-
-                              },
-                              leading: Text("R\$ 50.00", style: TextStyle(fontSize: 20),),
-                              trailing: SizedBox(
-
-                                child: Column(
-                                  children: [
-                                    Icon(Icons.ac_unit_sharp)
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
+                    itemCount: 50,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        margin: EdgeInsets.all(5),
+                        child: Material(
+                          elevation: 3,
+                          child: ListItem(
+                              qtt: "R\$ 50,00",
+                              date: "22/10/2020",
+                              category: "Mercado",
+                              onDelete: () => {}),
                         ),
-                      ),
-                    );
-                  }
-                ),
+                      );
+                    }),
               ),
-            )
+            ),
           ],
         ),
         floatingActionButton:
