@@ -27,7 +27,9 @@ class PostingListScreen extends StatelessWidget {
                         child: Column(
                           children: [
                             ListTile(
-                              onTap: () => { },
+                              onTap: () => {
+
+                              },
                               leading: Text("R\$ 50.00", style: TextStyle(fontSize: 20),),
                               trailing: SizedBox(
 
