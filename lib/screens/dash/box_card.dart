@@ -13,8 +13,8 @@ class BoxCard extends StatelessWidget {
       children: [
         Container(
           margin: EdgeInsets.all(10),
-          width: 110,
-          height: 110,
+          width: 120,
+          height: 120,
           child: Material(
             color: Color(0xff27FF30),
             shape:

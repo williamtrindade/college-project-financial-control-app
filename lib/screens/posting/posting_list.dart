@@ -17,11 +17,33 @@ class PostingListScreen extends StatelessWidget {
           children: [
             Expanded(
               child: Container(
-                child: ListView.builder(itemBuilder: (context, index) {
-                  return Container(
-                    child: Text('Teste'),
-                  );
-                }),
+                child: ListView.builder(
+                  itemCount: 50,
+                  itemBuilder: (context, index) {
+                    return Material(
+                      elevation: 20,
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        child: Column(
+                          children: [
+                            ListTile(
+                              onTap: () => { },
+                              leading: Text("R\$ 50.00", style: TextStyle(fontSize: 20),),
+                              trailing: SizedBox(
+
+                                child: Column(
+                                  children: [
+                                    Icon(Icons.ac_unit_sharp)
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  }
+                ),
               ),
             )
           ],

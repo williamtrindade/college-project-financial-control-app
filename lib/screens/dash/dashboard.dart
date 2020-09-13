@@ -44,25 +44,23 @@ class DashboardScreen extends StatelessWidget {
             ),
             Container(
               height: 150,
-              child:
-                Center(
-                  child: ListView (
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      BoxCard(text: 'Histórico mensal', onTap: () => {}),
-                      BoxCard(text: 'Lançamentos', onTap: () => {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => PostingListScreen()
-                          )
+              child: Center(
+                child: ListView (
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    BoxCard(text: 'Histórico mensal', onTap: () => {}),
+                    BoxCard(text: 'Lançamentos', onTap: () => {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => PostingListScreen()
                         )
-                      }),
-                      BoxCard(text: 'Categorias de gastos', onTap: () => {}),
-                    ],
-                  ),
+                      )
+                    }),
+                    BoxCard(text: 'Categorias de gastos', onTap: () => {}),
+                  ],
                 ),
-
+              ),
             ),
           ],
         )
