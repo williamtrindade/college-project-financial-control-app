@@ -49,17 +49,18 @@ class Assets extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-            fontSize: 25,
+            fontSize: 20,
             color: Colors.black,
           ),
         ),
         onPressed: onPressed);
   }
 
-  static Container largeInput({@required String label}) {
+  static Container largeInput({@required String label, @required TextInputType keyboardType}) {
     return Container(
       margin: EdgeInsets.all(10),
       child: TextFormField(
+        keyboardType: keyboardType,
         decoration: InputDecoration(
           labelText: label,
           border: OutlineInputBorder(),

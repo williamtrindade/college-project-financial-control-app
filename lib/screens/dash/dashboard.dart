@@ -1,4 +1,5 @@
 import 'package:app/screens/auth/login.dart';
+import 'package:app/screens/categories/categories_list.dart';
 import 'package:app/screens/posting/posting_list.dart';
 import 'package:app/widgets/assets.dart';
 import 'package:app/screens/dash/box_card.dart';
@@ -57,7 +58,13 @@ class DashboardScreen extends StatelessWidget {
                         )
                       )
                     }),
-                    BoxCard(text: 'Categorias de gastos', onTap: () => {}),
+                    BoxCard(text: 'Categorias de gastos', onTap: () => {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => CategoriesListScreen()
+                          )
+                      )
+                    }),
                   ],
                 ),
               ),
